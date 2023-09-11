@@ -42,5 +42,16 @@ function selectionChanged() {
 	const selectedVillain = villains[selectedVillainValue];
 
 	// Your code goes here
+ if (selectedHero) {
+    document.querySelector("#heroDetails").textContent = `Hero: ${selectedHero.alias}, Power Level: ${selectedHero.powerLevel}`;
+  } else {
+    document.querySelector("#heroDetails").textContent = "Select a hero";
+  }
 
+  if (selectedVillain) {
+    document.querySelector("#villainDetails").textContent = `Villain: ${selectedVillain.alias}, Power Level: ${selectedVillain.powerLevel}`;
+  } else {
+    document.querySelector("#villainDetails").textContent = "Select a villain";
+  }
 }
+
